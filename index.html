@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScripts Fundamentals</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <section class="content">
+
+    <div class="header">
+      <h2>
+        <script>
+          document.write("Tutorial: JavaScripts Fundamentals");
+        </script>
+      </h2>
+    </div>
+
+    <div class="maincontent">
+
+      <div id="show">
+
+      </div>
+
+      <script>
+        var name = "Juyel Rana"
+        document.write(name)
+        document.write("<br/>")
+        var a = 10
+        var b = 10
+        var sum = a + b
+        var pro = a * b
+        var div = a / b
+
+        document.write("Sum is: " + sum + " Product: " + pro + " Division: " + div)
+        document.write("<br/>")
+
+        var color = "green"
+
+        function greenColor() {
+          window.color = "red"
+          document.write("Inside function: " + color)
+        }
+        greenColor()
+        document.write("<br>")
+        document.write("Outside function: " + color)
+
+        var aj = "Juyel Rana"
+        var bj = "Rana"
+        var myname = aj + bj
+
+        document.getElementById("show").innerHTML = myname
+        document.write("<br>")
+        document.write(myname)
+
+        window.alert(name)
+        console.log(myname);
+      </script>
+    </div>
+
+    <div class="footer">
+      <h2>Dream Factory Projects</h2>
+    </div>
+
+  </section>
+</body>
+
+</html>
