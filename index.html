@@ -19,28 +19,15 @@
     </div>
 
     <div class="maincontent">
-      <input type="text" name="subject" id="subject">
-      <p style="color:red;" id="show">
-      </p>
-      <button onclick="getSubjectInfo()">Check</button>
 
+      <button onclick="checkEvent()">Check Here</button>
+      <button onmouseover="checkEvent()">Action</button>
+      <button onmouseup="checkEvent()">Action</button>
+      <button onkeydown="checkEvent()">Action</button>
 
       <script>
-        function getSubjectInfo() {
-          var subject_info;
-          var subject = document.getElementById("subject").value
-          switch (subject) {
-            case "Java":
-              subject_info = "I love Java Programming"
-              break;
-            case "C#":
-              subject_info = "I love C# Programming"
-              break;
-            default:
-              subject_info = "Unknown....."
-          }
-
-          document.getElementById("show").innerHTML = subject_info
+        function checkEvent() {
+          console.log("This is an event");
         }
       </script>
     </div>
