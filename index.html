@@ -20,15 +20,29 @@
 
     <section class="maincontent">
 
+      <div>
+        <span id="hour"></span>:
+        <span id="minute"></span>:
+        <span id="second"></span>
+        <span id="ampm"></span>
+      </div>
       <script>
-        var i = 0;
-        var x = setInterval(function() {
-          i++;
-          alert("Belal loves Nishat.")
-          if (i == 4) {
-            clearInterval(x);
-          }
-        }, 1000);
+        function clock() {
+
+          var date = new Date();
+          var hours = date.getHours();
+          var minutes = date.getMinutes();
+          var seconds = date.getSeconds();
+          var ampm = hours >= 12 ? "pm" : "am"
+
+          document.getElementById('hour').innerHTML = hours;
+          document.getElementById('minute').innerHTML = minutes;
+          document.getElementById('second').innerHTML = seconds;
+          document.getElementById('ampm').innerHTML = ampm;
+
+        }
+
+        setInterval(clock, 1000);
       </script>
 
     </section>
