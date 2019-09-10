@@ -20,15 +20,45 @@
 
     <div class="maincontent">
       <script>
-        var x = 10
-        var y = 40
-        var sum = x % y
-        document.write(sum)
+        for (i = 1; i <= 10; i++) {
+          for (j = 1; j <= 10; j++) {
+            document.write(i + "x" + j + " = " + i * j + "<br>")
+            if (j == 10) {
+              document.write("<br>")
+            }
+          }
+        }
+        var i = 0;
+        while (true) {
+          if (i == 10) {
+            break;
+          }
+          i++;
+          document.write("Juyel Rana <br>")
+        }
+
+        document.write("<br>")
+
+        var color = ["Red", "Green", "Blue", "Purple"]
+
+        color.forEach(function(element) {
+          document.write(element + "<br>")
+        })
+        document.write("<br>")
+        var m = 0;
+
+        for (m in color) {
+          document.write(color[m] + "<br>")
+        }
       </script>
     </div>
 
     <div class="footer">
-      <h2>Dream Factory Projects</h2>
+      <h2>
+        <script>
+          document.write('Dream Factory Projects')
+        </script>
+      </h2>
     </div>
 
   </section>
