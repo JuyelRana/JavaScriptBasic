@@ -21,22 +21,18 @@
     <section class="maincontent">
 
       <script type="text/javascript">
-        var data = "Training with live Project. Juyel Rana with last Project building.";
-        var result1 = data.indexOf('Project');
-        var result2 = data.lastIndexOf('Project');
-
-        document.write(result1 + "<br>" + result2 + "<br>");
-
-        var num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-        var isPresent = num.indexOf(5);
-
-        if (isPresent > -1) {
-          document.write("Yes, it is exist....");
-        } else {
-          document.write("No, it is not exist...");
+        function livePro() {
+          confirm("Do you want to go?");
+          var name = prompt("Please enter your name here...");
+          if (name == "") {
+            alert("Field must not be empty!");
+          } else {
+            document.write("Name is: " + name);
+          }
         }
       </script>
+
+      <button onclick="livePro()">confirm</button>
 
     </section>
 
