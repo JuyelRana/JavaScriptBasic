@@ -19,36 +19,28 @@
     </div>
 
     <div class="maincontent">
+      <input type="text" name="subject" id="subject">
+      <p style="color:red;" id="show">
+      </p>
+      <button onclick="getSubjectInfo()">Check</button>
+
+
       <script>
-        for (i = 1; i <= 10; i++) {
-          for (j = 1; j <= 10; j++) {
-            document.write(i + "x" + j + " = " + i * j + "<br>")
-            if (j == 10) {
-              document.write("<br>")
-            }
+        function getSubjectInfo() {
+          var subject_info;
+          var subject = document.getElementById("subject").value
+          switch (subject) {
+            case "Java":
+              subject_info = "I love Java Programming"
+              break;
+            case "C#":
+              subject_info = "I love C# Programming"
+              break;
+            default:
+              subject_info = "Unknown....."
           }
-        }
-        var i = 0;
-        while (true) {
-          if (i == 10) {
-            break;
-          }
-          i++;
-          document.write("Juyel Rana <br>")
-        }
 
-        document.write("<br>")
-
-        var color = ["Red", "Green", "Blue", "Purple"]
-
-        color.forEach(function(element) {
-          document.write(element + "<br>")
-        })
-        document.write("<br>")
-        var m = 0;
-
-        for (m in color) {
-          document.write(color[m] + "<br>")
+          document.getElementById("show").innerHTML = subject_info
         }
       </script>
     </div>
