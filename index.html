@@ -10,35 +10,37 @@
 <body>
   <section class="content">
 
-    <div class="header">
+    <header class="header">
       <h2>
         <script>
           document.write("Tutorial: JavaScripts Fundamentals");
         </script>
       </h2>
-    </div>
+    </header>
 
-    <div class="maincontent">
-
-      <button onclick="checkEvent()">Check Here</button>
-      <button onmouseover="checkEvent()">Action</button>
-      <button onmouseup="checkEvent()">Action</button>
-      <button onkeydown="checkEvent()">Action</button>
+    <section class="maincontent">
+      <div id="state">
+        Md Juyel Rana
+      </div>
+      <hr>
 
       <script>
-        function checkEvent() {
-          console.log("This is an event");
-        }
-      </script>
-    </div>
+        var div1 = document.getElementById("state").innerText;
+        var div2 = document.querySelector("div").innerText;
+        var div3 = document.querySelectorAll("div")[0].innerText;
+        var div4 = document.getElementsByTagName("div")[0].innerText;
 
-    <div class="footer">
+        document.write(div1 + "<br>" + div2 + "<br>" + div3 + "<br>" + div4 + "<br>");
+      </script>
+    </section>
+
+    <footer class="footer">
       <h2>
         <script>
           document.write('Dream Factory Projects')
         </script>
       </h2>
-    </div>
+    </footer>
 
   </section>
 </body>
