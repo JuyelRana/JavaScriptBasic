@@ -21,27 +21,34 @@
     <section class="maincontent">
 
       <script>
-        // function revMe(s) {
-        //   return s.split(" ").reverse().join("");
-        // }
-        // var x = "A B C D";
-        // // tn.a = 1000
-        // document.write(revMe(x));
+        var timeout
 
-        String.prototype.revMe = function(){
-          var s = ""
-          var i = this.length
-          while (i>0) {
-            s += this.substring(i-1,i);
-            i--;
-          }
-          return s;
+        function timeoutTrigger() {
+          document.getElementById("show").innerHTML = "The timeout has been Triggered......."
         }
 
-        var x = "A B C D"
-        
-        document.write(x.revMe())
+        function timeInit() {
+          timeout = setTimeout("timeoutTrigger()", 3000);
+          document.getElementById("show").innerHTML = "The timeout has been Started..."
+        }
+
+        function timeClear() {
+          clearTimeout(timeout)
+          document.getElementById("show").innerHTML = "The timeout has been Cleared...."
+
+          setTimeout(function () {
+            timeInit()
+          }, 3000);
+        }
       </script>
+
+      <div>
+        <input type="button" value="Test Timeout" onclick="timeInit()">
+        <input type="button" value="Clear Timeout" onclick="timeClear()">
+      </div>
+      <div id="show">
+
+      </div>
     </section>
 
     <footer class="footer">
