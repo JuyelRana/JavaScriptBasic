@@ -21,31 +21,23 @@
     <section class="maincontent">
 
       <script>
-        function totalNum(a, b) {
-          this.x = a
-          this.y = b
-          this.sum = function() {
-            return this.x + this.y;
+        function totalNumber(a) {
+          // Private
+          x = 20
+          total = function() {
+            return x + a
           }
 
-          this.product = function() {
-            return this.x / this.y;
-          }
-        }
-
-        function productNum(a, b) {
-          this.x = a
-          this.y = b
-          this.product = function() {
-            return this.x * this.y;
+          //public
+          // this keyword is use for public method, function, variable etc..
+          this.result = function() {
+            this.sum = total()
+            return "Result: "+this.sum;
           }
         }
 
-        totalNum.prototype = new productNum()
-
-        var tn = new totalNum(10, 5);
-
-        document.write(tn.product())
+        var tn = new totalNumber(10)
+        document.write(tn.result())
       </script>
     </section>
 
