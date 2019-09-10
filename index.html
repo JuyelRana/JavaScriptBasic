@@ -21,22 +21,26 @@
     <section class="maincontent">
 
       <script>
-        function totalNumber(a) {
-          // Private
-          this.x = 20
-          this.y = function() {
-            return this.x + this.y;
-          }
+        // function revMe(s) {
+        //   return s.split(" ").reverse().join("");
+        // }
+        // var x = "A B C D";
+        // // tn.a = 1000
+        // document.write(revMe(x));
 
+        String.prototype.revMe = function(){
+          var s = ""
+          var i = this.length
+          while (i>0) {
+            s += this.substring(i-1,i);
+            i--;
+          }
+          return s;
         }
 
-        totalNumber.prototype.a = 2000 //public property
-        totalNumber.b = 800 // static property
-
-        var tn = new totalNumber()
-
-        // tn.a = 1000
-        document.write(totalNumber.b);
+        var x = "A B C D"
+        
+        document.write(x.revMe())
       </script>
     </section>
 
