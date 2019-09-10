@@ -21,30 +21,35 @@
     <section class="maincontent">
 
       <script>
-        var timeout
+        var countdown;
+        var countdownNumber;
 
-        function timeoutTrigger() {
-          document.getElementById("show").innerHTML = "The timeout has been Triggered......."
+        function countdownInit() {
+          countdownNumber = 11;
+          countdownTrigger();
         }
 
-        function timeInit() {
-          timeout = setTimeout("timeoutTrigger()", 3000);
-          document.getElementById("show").innerHTML = "The timeout has been Started..."
+        function countdownTrigger() {
+          if(countdownNumber > 0){
+            countdownNumber--;
+            document.getElementById('show').innerHTML = countdownNumber;
+
+            if(countdownNumber > 0){
+              countdown = setTimeout("countdownTrigger()", 1000);
+            }
+          }
         }
 
-        function timeClear() {
-          clearTimeout(timeout)
-          document.getElementById("show").innerHTML = "The timeout has been Cleared...."
+      function countdownClear() {
+        clearTimeout(countdown);
+        // document.getElementById('show').innerHTML = "The countdown has been cleared....";
+      }
 
-          setTimeout(function () {
-            timeInit()
-          }, 3000);
-        }
       </script>
 
       <div>
-        <input type="button" value="Test Timeout" onclick="timeInit()">
-        <input type="button" value="Clear Timeout" onclick="timeClear()">
+        <input type="button" value="Start Timedown" onclick="countdownInit()">
+        <input type="button" value="Stop Timedown" onclick="countdownClear()">
       </div>
       <div id="show">
 
