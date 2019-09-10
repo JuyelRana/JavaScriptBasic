@@ -23,21 +23,20 @@
       <script>
         function totalNumber(a) {
           // Private
-          x = 20
-          total = function() {
-            return x + a
+          this.x = 20
+          this.y = function() {
+            return this.x + this.y;
           }
 
-          //public
-          // this keyword is use for public method, function, variable etc..
-          this.result = function() {
-            this.sum = total()
-            return "Result: "+this.sum;
-          }
         }
 
-        var tn = new totalNumber(10)
-        document.write(tn.result())
+        totalNumber.prototype.a = 2000 //public property
+        totalNumber.b = 800 // static property
+
+        var tn = new totalNumber()
+
+        // tn.a = 1000
+        document.write(totalNumber.b);
       </script>
     </section>
 
