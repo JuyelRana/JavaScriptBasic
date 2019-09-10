@@ -20,17 +20,24 @@
 
     <section class="maincontent">
       <div id="state">
-        Md Juyel Rana
+
       </div>
       <hr>
 
       <script>
-        var div1 = document.getElementById("state").innerText;
-        var div2 = document.querySelector("div").innerText;
-        var div3 = document.querySelectorAll("div")[0].innerText;
-        var div4 = document.getElementsByTagName("div")[0].innerText;
+        function liveProject() {
+          var a = 200
+          this.x = 300;
+          this.y = 400;
+          this.sum = function() {
+            return this.x + this.y;
+          }
+        }
 
-        document.write(div1 + "<br>" + div2 + "<br>" + div3 + "<br>" + div4 + "<br>");
+        var lproject = new liveProject();
+        document.write("x: " + lproject.x + "<br> y: " + lproject.y + "<br>");
+        document.write("sum: " + lproject.sum());
+        // liveProject()
       </script>
     </section>
 
