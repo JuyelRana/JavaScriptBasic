@@ -21,10 +21,21 @@
     <section class="maincontent">
 
       <script type="text/javascript">
-        var numString = "200sdfhsdkjhusdcmnhf";
-        var numGen = "10";
-        console.log(parseInt(numString));
-        console.log(Number(numString));
+        var value = 100;
+
+        function myFunc() {
+
+          var value;
+          if (!value) {
+            value = 200;
+          }
+
+          document.write(value);
+        }
+
+        myFunc();
+
+        console.log(value);
       </script>
     </section>
 
