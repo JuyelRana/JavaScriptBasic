@@ -19,19 +19,53 @@
     </header>
 
     <section class="maincontent">
+      <form name="form" action="index.html" method="post">
+        <table>
+          <tr>
+            <td>Input box:</td>
+            <td><input type="text" name="getvalue" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" name="" value="Absolute" onclick="calculate(1)"></td>
+            <td><input type="button" name="" value="Round" onclick="calculate(2)"></td>
+          </tr>
+          <tr>
+            <td><input type="button" name="" value="Sine" onclick="calculate(3)"></td>
+            <td><input type="button" name="" value="Cosine" onclick="calculate(4)"></td>
+          </tr>
+
+          <tr>
+            <td><input type="button" name="" value="Tangent" onclick="calculate(5)"></td>
+            <td><input type="button" name="" value="Log" onclick="calculate(6)"></td>
+          </tr>
+
+          <tr>
+            <td><input type="button" name="" value="Floor" onclick="calculate(7)"></td>
+            <td><input type="button" name="" value="Ceil" onclick="calculate(8)"></td>
+          </tr>
+
+          <tr>
+            <td><input type="button" name="" value="Square Root" onclick="calculate(9)"></td>
+            <td><input type="button" name="" value="Random" onclick="calculate(10)"></td>
+          </tr>
+
+          <tr>
+            <td><input type="button" name="" value="Max" onclick="calculate(11)"></td>
+            <td><input type="button" name="" value="Min" onclick="calculate(12)"></td>
+          </tr>
+          <tr>
+            <td><input type="button" name="" value="E" onclick="calculate(13)"></td>
+            <td><input type="button" name="" value="Pi" onclick="calculate(14)"></td>
+          </tr>
+          <tr>
+            <td>Result box:</td>
+            <td><input type="text" name="showresult" /></td>
+          </tr>
+        </table>
+      </form>
 
       <script type="text/javascript">
-        function fact(n) {
-          if (n == 1 || n == 0) {
-            return 1;
-          } else {
-            return n * fact(n - 1);
-          }
-        }
 
-        var n = prompt("Find the factorial of ........");
-
-        document.write(fact(n));
       </script>
     </section>
 
