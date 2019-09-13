@@ -21,11 +21,17 @@
     <section class="maincontent">
 
       <script type="text/javascript">
-        var a = new String("Live Project<br>");
-        var b = String("Live Project");
-        document.write(a instanceof String);
-        document.write("<br>");
-        document.write(b instanceof String);
+        function fact(n) {
+          if (n == 1 || n == 0) {
+            return 1;
+          } else {
+            return n * fact(n - 1);
+          }
+        }
+
+        var n = prompt("Find the factorial of ........");
+
+        document.write(fact(n));
       </script>
     </section>
 
