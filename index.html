@@ -21,17 +21,13 @@
     <section class="maincontent">
 
       <script type="text/javascript">
-        // var x = 1000;
-
-        function liveProject() {
-          project();
-          return false;
-
-          function project() {
-            document.write("Live Project");
-          }
+        function live() {
+          return {
+            project: 1
+          };
         }
-        liveProject();
+
+        document.write(typeof live())
       </script>
     </section>
 
