@@ -21,21 +21,17 @@
     <section class="maincontent">
 
       <script type="text/javascript">
-        var value = 100;
+        // var x = 1000;
 
-        function myFunc() {
+        function liveProject() {
+          project();
+          return false;
 
-          var value;
-          if (!value) {
-            value = 200;
+          function project() {
+            document.write("Live Project");
           }
-
-          document.write(value);
         }
-
-        myFunc();
-
-        console.log(value);
+        liveProject();
       </script>
     </section>
 
