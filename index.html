@@ -65,7 +65,59 @@
       </form>
 
       <script type="text/javascript">
+        function calculate(process) {
+          with(document.form)
+          switch (process) {
+            case 1:
+              showresult.value = Math.abs(getvalue.value);
+              break;
+            case 2:
+              showresult.value = Math.round(getvalue.value);
+              break;
+            case 3:
+              showresult.value = Math.sin(convDegree(getvalue.value));
+              break;
+            case 4:
+              showresult.value = Math.cos(convDegree(getvalue.value));
+              break;
+            case 5:
+              showresult.value = Math.tan(convDegree(getvalue.value));
+              break;
+            case 6:
+              showresult.value = Math.log(getvalue.value);
+              break;
+            case 7:
+              showresult.value = Math.floor(getvalue.value);
+              break;
+            case 8:
+              showresult.value = Math.ceil(getvalue.value);
+              break;
+            case 9:
+              showresult.value = Math.sqrt(getvalue.value);
+              break;
+            case 10:
+              showresult.value = Math.random();
+              break;
+            case 11:
+              alert(Math.max(getvalue.value, prompt('Enter number:', '0')) + 'is greater than the number');
+              break;
+            case 12:
+              alert(Math.min(getvalue.value, prompt('Enter number:', '0')) + 'is smaller than the number');
+              break;
+            case 13:
+              showresult.value = Math.E();
+              break;
+            case 14:
+              showresult.value = Math.PI();
+              break;
+            default:
 
+          }
+        }
+
+        function convDegree(x) {
+          return x * 22 / 7 / 180;
+        }
       </script>
     </section>
 
