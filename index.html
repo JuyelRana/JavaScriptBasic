@@ -21,10 +21,11 @@
     <section class="maincontent">
 
       <script type="text/javascript">
-        var x = 2 + 2;
-        var y = new String("2 + 2")
-        document.write(eval(x));
-        document.write(y);
+        var str = "Lamia Islam Mim"
+        var esc_str = escape(str);
+        var un_esc_str = unescape(esc_str);
+        document.write(esc_str + "<br>");
+        document.write(un_esc_str);
       </script>
     </section>
 
