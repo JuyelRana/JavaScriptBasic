@@ -19,105 +19,12 @@
     </header>
 
     <section class="maincontent">
-      <form name="form" action="index.html" method="post">
-        <table>
-          <tr>
-            <td>Input box:</td>
-            <td><input type="text" name="getvalue" /></td>
-          </tr>
-          <tr>
-            <td><input type="button" name="" value="Absolute" onclick="calculate(1)"></td>
-            <td><input type="button" name="" value="Round" onclick="calculate(2)"></td>
-          </tr>
-          <tr>
-            <td><input type="button" name="" value="Sine" onclick="calculate(3)"></td>
-            <td><input type="button" name="" value="Cosine" onclick="calculate(4)"></td>
-          </tr>
-
-          <tr>
-            <td><input type="button" name="" value="Tangent" onclick="calculate(5)"></td>
-            <td><input type="button" name="" value="Log" onclick="calculate(6)"></td>
-          </tr>
-
-          <tr>
-            <td><input type="button" name="" value="Floor" onclick="calculate(7)"></td>
-            <td><input type="button" name="" value="Ceil" onclick="calculate(8)"></td>
-          </tr>
-
-          <tr>
-            <td><input type="button" name="" value="Square Root" onclick="calculate(9)"></td>
-            <td><input type="button" name="" value="Random" onclick="calculate(10)"></td>
-          </tr>
-
-          <tr>
-            <td><input type="button" name="" value="Max" onclick="calculate(11)"></td>
-            <td><input type="button" name="" value="Min" onclick="calculate(12)"></td>
-          </tr>
-          <tr>
-            <td><input type="button" name="" value="E" onclick="calculate(13)"></td>
-            <td><input type="button" name="" value="Pi" onclick="calculate(14)"></td>
-          </tr>
-          <tr>
-            <td>Result box:</td>
-            <td><input type="text" name="showresult" /></td>
-          </tr>
-        </table>
-      </form>
 
       <script type="text/javascript">
-        function calculate(process) {
-          with(document.form)
-          switch (process) {
-            case 1:
-              showresult.value = Math.abs(getvalue.value);
-              break;
-            case 2:
-              showresult.value = Math.round(getvalue.value);
-              break;
-            case 3:
-              showresult.value = Math.sin(convDegree(getvalue.value));
-              break;
-            case 4:
-              showresult.value = Math.cos(convDegree(getvalue.value));
-              break;
-            case 5:
-              showresult.value = Math.tan(convDegree(getvalue.value));
-              break;
-            case 6:
-              showresult.value = Math.log(getvalue.value);
-              break;
-            case 7:
-              showresult.value = Math.floor(getvalue.value);
-              break;
-            case 8:
-              showresult.value = Math.ceil(getvalue.value);
-              break;
-            case 9:
-              showresult.value = Math.sqrt(getvalue.value);
-              break;
-            case 10:
-              showresult.value = Math.random();
-              break;
-            case 11:
-              alert(Math.max(getvalue.value, prompt('Enter number:', '0')) + 'is greater than the number');
-              break;
-            case 12:
-              alert(Math.min(getvalue.value, prompt('Enter number:', '0')) + 'is smaller than the number');
-              break;
-            case 13:
-              showresult.value = Math.E();
-              break;
-            case 14:
-              showresult.value = Math.PI();
-              break;
-            default:
-
-          }
-        }
-
-        function convDegree(x) {
-          return x * 22 / 7 / 180;
-        }
+        var x = 2 + 2;
+        var y = new String("2 + 2")
+        document.write(eval(x));
+        document.write(y);
       </script>
     </section>
 
