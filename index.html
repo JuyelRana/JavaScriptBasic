@@ -19,17 +19,24 @@
     </header>
 
     <section class="maincontent">
-      <button onclick="myreg()">Test Now</button>
-      <div id="str">
-        My Name is Juyel Rana
-      </div>
-      <div id="show">
-
-      </div>
+      <table>
+        <tr>
+          <td>Email:</td>
+          <td><input type="text" id="email" onkeyup="validateEmail()" /></td>
+        </tr>
+      </table>
       <script type="text/javascript">
-        function myreg() {
-          txt = document.getElementById("str").innerHTML;
-          document.getElementById("show").innerHTML = /J/.test(txt);
+        function validateEmail() {
+          var getEmail = document.getElementById("email");
+          var email = getEmail.value;
+          var emailRgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          // getEmail.style.color = "white";
+          if (emailRgx.test(email)) {
+            getEmail.style.borderColor = "#63c0df";
+          } else {
+            getEmail.style.borderColor = "#ff9966";
+          }
         }
       </script>
     </section>
