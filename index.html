@@ -19,13 +19,18 @@
     </header>
 
     <section class="maincontent">
+      <button onclick="myreg()">Test Now</button>
+      <div id="str">
+        My Name is Juyel Rana
+      </div>
+      <div id="show">
 
+      </div>
       <script type="text/javascript">
-        var str = "Lamia Islam Mim"
-        var b64 = btoa(str);
-        var x = atob(b64)
-        document.write(b64 + "<br>");
-        document.write(x);
+        function myreg() {
+          txt = document.getElementById("str").innerHTML;
+          document.getElementById("show").innerHTML = /J/.test(txt);
+        }
       </script>
     </section>
 
